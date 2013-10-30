@@ -1,0 +1,117 @@
+@import "normalize.sass"
+@import "constants.sass"
+@import "layout.sass"
+@import "compass"
+
+
+
+html
+  width: 100%
+  height: 100%
+  min-height: 100%
+  font-size: 1em
+
+
+
+body
+  font-size: 100%
+  height: 100%
+  min-height: 100%
+  margin: 0
+  padding: 0
+  width: 100%
+  color: #f1f1f1
+  overflow-x: hidden
+  font-family: "Source Sans Pro" "Helvetica Neue", Helvetica, Arial, sans-serif
+  -webkit-font-smoothing: antialiased
+  background-color: #1e1e1e
+  @media only screen and (min-width: $second-break)
+    background: url("../img/bg.jpg") no-repeat
+    background-attachment: fixed
+    background-position-y: 100%
+    background-position-x: 100%
+    background-size: auto
+    background-color: #1e1e1e
+
+
+
+ul, ol
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+a, a:visited
+  text-decoration: none
+  color: #3AEB96
+  &:hover, &:focus
+    color: lighten(#3AEB96, 12%)
+
+
+
+
+img
+  max-width: 100%
+  height: auto 
+  width: auto 
+
+// main styles
+
+
+.content-wrapper
+  margin-top: 10%
+  z-index: 1000
+  position: relative
+  +opacity(0)
+  @media only screen and (min-width: $second-break)
+    margin-top: 22%
+
+
+.is-visible
+  position: relative
+  top: 25px
+  +single-transition(all, 0.5s, ease-out, 1s) 
+  +opacity(1)
+
+
+
+
+
+a.link, a.link:visited
+  line-height: 1
+  +single-transition(all, 0.2s, ease-out)
+  font-weight: 600
+  @media only screen and (min-width: $first-break)
+    padding: $l-s/3 $l-s
+    border: 1px solid #3AEB96
+    +border-radius(5px)  
+    display: inline-block
+    margin: 0 $l-s/3
+    font-weight: 300
+  &:hover, &:focus
+    @media only screen and (min-width: $first-break)
+      background: #3AEB96
+      color: white
+
+
+
+// type 
+
+.header
+  font-size: 3em
+  font-weight: 600
+  margin-bottom: $l-s/4
+  @media only screen and (min-width: $second-break)
+    font-size: 4.5em
+
+
+.paragraph
+  font-size: 1.4em
+  line-height: 1.6
+  font-weight: 300
+  margin-bottom: $l-m
+  @media only screen and (min-width: $second-break)
+    font-size: 2em
+    line-height: 1.8
+
+
+  
