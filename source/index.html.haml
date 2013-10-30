@@ -1,11 +1,34 @@
 ---
-title: Julian Panzer |  Interaction Designer
+title: VIBES PROTOTYPE
 ---
 
-%section
-  .l-container--wide
-    .content-wrapper#content-trigger
-      %h1.header Hello,
-      %p.paragraph
-        my name is Julian and I am a freelance interaction designer based in Berlin. You can find me on <a target="blanc" target="blanc"href="https://twitter.com/@julianpanzer" class="link">Twitter</a>, <a target="blanc" target="blanc"href="http://dribbble.com/julianpanzer" class="link">Dribbble</a> and <a target="blanc" target="blanc"href="http://www.linkedin.com/pub/julian-panzer/64/234/6bb" class="link">LinkedIn</a>. If you would like to see some of my recent work, have a project to talk about, or just want to chat, drop me a line via <a target="blanc" target="blanc"href="mailTo:post@julianpanzer.com" class="link">email</a> or <a target="blanc" target="blanc"href="skype:jogilan?call" class="link">Skype</a>.
+%section.header
+  %h1 GOODVI.BE
 
+
+%section#flex-wrap
+  .l-container--narrow
+    #title     
+      :javascript
+          new Medium({
+              element: document.getElementById('title'),
+              mode: 'inline',
+              placeholder: 'Write a nice title'
+          });
+
+    #article
+      :javascript  
+        new Medium({
+            element: document.getElementById('article'),
+            mode: 'rich',
+            maxLength: 500,
+            placeholder: 'Write a positive message'
+        });      
+
+    %div.image-wrap
+      %img{:src=>"img/guy.png"}
+      %span choose a person to send it to
+
+
+    %button.btn-primary.mt{:href => "#"}
+      %span SEND

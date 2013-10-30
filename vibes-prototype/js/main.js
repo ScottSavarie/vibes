@@ -1,0 +1,3 @@
+/* =Modernizer replace SVG with PNG
+============================================================================== */
+Modernizr.svg||$('img[src*="svg"]').attr("src",function(){return $(this).attr("src").replace(".svg",".png")}),$(document).ready(function(){var e=$(window).width();$("#content-trigger").addClass("is-visible")}),$(document).ready(function(){var e=$(window).height();$("#flex-wrap").css("min-height",e)}),$(window).resize(function(){var e=$(window).height();$("#flex-wrap").css("min-height",e)});
